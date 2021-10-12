@@ -120,8 +120,8 @@ where In(p, P) {
 Point p, q, r
 where Collinear(p, q, r) {
   ensure collinear(p.icon.center, q.icon.center, r.icon.center)
-  encourage repel(p.icon, q.icon, const.repelWeight)
-  encourage repel(q.icon, r.icon, const.repelWeight)
+  encourage notTooClose(p.icon, q.icon, const.repelWeight)
+  encourage notTooClose(q.icon, r.icon, const.repelWeight)
 }
 
 --Linelike

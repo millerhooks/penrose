@@ -80,8 +80,12 @@ export const objDict = {
   /**
    * Try to repel shapes `s1` and `s2` with some weight.
    */
-  repel: ([t1, s1]: [string, any], [t2, s2]: [string, any], weight = 10.0) => {
-    // HACK: `repel` typically needs to have a weight multiplied since its magnitude is small
+  notTooClose: (
+    [t1, s1]: [string, any],
+    [t2, s2]: [string, any],
+    weight = 10.0
+  ) => {
+    // HACK: `notTooClose` typically needs to have a weight multiplied since its magnitude is small
     // TODO: find this out programmatically
     const repelWeight = 10e6;
 
